@@ -1,0 +1,10 @@
+//- BLOG MEDIA BLOCK ASIDE
+mixin blog-post-media-block(blocktitle, blockcount, mediaURL, mediaCaption)
+	- var blockcount = blockcount
+	.panel.panel-default.blog-photo-strip
+		.panel-heading #{blocktitle}
+		- for (var n = 1; n < blockcount; n++)
+			.panel-body
+				figure.blog-media-block-figure
+					img.img-responsive(src=mediaURL)
+					figcaption.blog-media-block-figure-caption #{mediaCaption}

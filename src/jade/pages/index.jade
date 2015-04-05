@@ -1,0 +1,21 @@
+//- REQUIRED FOR INDEX.JADE - OTHER TEMPLATES CAN EXTEND INDEX INSTEAD OF THE FRAME WORK
+extends ../frame/core.html5.jade
+block TITLE
+	title Bootstrap Navbar with Sidebar Template - D.H.TECHNICAL.SOLUTIONS
+block FONTS-GOOGLE
+	// FONTS - GOOGLE FAVORITES
+	link(rel='stylesheet', media="all", type="text/css", href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700%7CLato:100,300,400,700%7CSource+Code+Pro:200,300,400,500,600,700%7COpen+Sans:300,400,600,700')
+	// FONTS - LATO
+	link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900")
+block SCRIPTS-POLY
+	// SCRIPTS POLYFILLS
+	script(type="text/javascript", charset="UTF-8", src="./js/polyfills.min.js")
+block NAVIGATION
+	#wrapper-navigation
+		include ./index/navigation/navbar
+block CONTENT
+	#wrapper-content
+		include ./index/content.jade
+block append SCRIPTS-APP
+	// SCRIPTS - APPLICATION CUSTOM
+	script(type="text/javascript", charset="UTF-8", src="./js/application.min.js")

@@ -1,0 +1,77 @@
+// SMALL SCREEN
+
+@media (min-width: 768px) {
+
+	// BOOTSTRAP OVERRIDES
+	.navbar {
+		> .container-fluid {
+			.navbar-brand {
+				margin: 						0;
+				margin-right: 					40px;
+				font-size: 						16px;
+				line-height: 					16px;
+			}
+			.navbar-collapse {
+				clear: 							none;
+
+				&.collapse {
+					.navbar-navs-links {
+						float:					right;
+						font-family: 			'Lato';
+						font-weight: 			300;
+						font-size: 				14px;
+/* 						letter-spacing: 				1px; */
+					}
+				}
+			}
+		}
+		i {
+			font-size: 							18px;
+		}
+	}
+	#wrapper-content {
+		margin-top: 							0;
+		header.container-fluid {
+			padding-left: 						0;
+			padding-right: 						0;
+			.jumbotron {
+				border-radius: 					0;
+			}
+		}
+	}
+.jumbotron {
+	padding:					45px;
+
+	h1, h2 {
+		font-size: 				35px;
+
+		small, .small {
+			font-size:			26px;
+		}
+	}
+	p {
+		font-size:				16px;
+		line-height: 			1.6;
+	}
+}
+/*
+	#wrapper-sidebar {
+    	position: 					fixed;
+		top: 						51px;
+		bottom: 					0;
+		left: 						0;
+		z-index: 					1000;
+    	overflow-x: 				hidden;
+		overflow-y: 				auto;
+		background-color: 			#222222;
+
+		.navbar-nav > li {
+			float: 					none;
+		}
+		.navbar-collapse.collapse {
+			display:				none;
+		}
+	}
+	*/
+}
+

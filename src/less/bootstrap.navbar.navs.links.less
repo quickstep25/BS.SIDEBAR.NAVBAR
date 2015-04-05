@@ -1,0 +1,48 @@
+
+// DEFAULTS TO NOT COLLAPSED STYLES, COLLAPSE SHOULD EXTEND STYLES
+.navbar-navs-links {
+/* 	float: right; */
+
+	.navbar-navs-links-toggle {
+		text-align: 			left;
+/* 		min-width: 				260px; */
+		i {
+			margin-right: 		10px;
+		}
+	}
+
+	li.dropdown {
+		.navbar-navs-links-menu {
+			font-size: 				inherit;
+			min-width: 				260px;
+			text-align: 			left;
+			visibility: 			hidden;
+			.opacity(0);
+			transition:				opacity 0s linear, visibility 0s linear;
+			li.divider:first-child, li.divider:last-child {
+				display: 			none;
+			}
+			i {
+				margin-right:		10px;
+			}
+		}
+		// WHEN DROPDOWN IS OPEN
+		&.open .navbar-navs-links-menu {
+			visibility:			visible;
+			.opacity(1);
+			transition: 		opacity 0.25s linear, visibility 0.25s linear;
+
+			> li > a {
+				padding: 			12px 15px;
+			}
+
+			> li + li.divider {
+				margin: 			20px 0 10px 0;
+			}
+		}
+	}
+}
+// COLLAPSE EXTENTION
+.collapse.in {
+
+}

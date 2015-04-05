@@ -1,0 +1,23 @@
+//- NAVS - PROGRESS BARS
+mixin navbar-nav-progressbar(id, icon, json)
+	- var counter = 1
+	- var navID = 'navbar-nav-progress-id-' + id
+	- var barID = 'navbar-nav-progressbar-' + id + '-'
+	li.dropdown
+		button.navbar-toggle.dropdown-toggle(id=navID, aria-haspopup='true', aria-expanded='false', type='button', data-toggle="dropdown", href='#')
+			span.sr-only Data Progress Button
+			i.fa(class=icon)
+		ul.dropdown-menu.dropdown-progress(role="menu", aria-labelledby=navID)
+			each dataset, index in json[0]
+				li.divider
+				li(role="presentation")
+					a(role="menuitem", tabindex='-1', href='#')
+						.progress-wrapper
+							.progress-title
+								i.fa.fa-fw.fa-exchange
+								| #{index}
+							.progress.progress-container
+								.label.label-default % COMPLETE
+								.progress-bar(id=barID + counter)(role="progressbar", aria-valuenow=0, aria-valuemin=0, aria-valuemax=100)(style='width: 0%')
+								- counter = counter + 1
+	- counter = 1

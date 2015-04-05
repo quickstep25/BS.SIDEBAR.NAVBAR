@@ -1,0 +1,10 @@
+//- BLOG TEXT BLOCK ASIDE
+mixin blog-post-text-block(blocktitle, blockcount, title, text)
+	- var blockcount = blockcount
+	.panel.panel-default.blog-text-block
+		.panel-heading #{blocktitle}
+		- for (var n = 1; n < blockcount; n++)
+			.panel-body
+				.well.well-sm
+					h4 #{title}
+					p #{text}

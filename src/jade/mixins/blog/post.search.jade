@@ -1,0 +1,11 @@
+//- BLOG POST SEARCH ASIDE
+mixin blog-post-search()
+	.panel.panel-default.blog-search
+		.panel-heading Blog Search
+		.panel-body
+			.well.well-sm
+				.input-group.input-group-sm
+					input.form-control(type="text", placeholder="search blog...", aria-describedby="blogsearch")
+					span.input-group-btn
+						button.btn.btn-default(type="button")
+							i.fa.fa-search

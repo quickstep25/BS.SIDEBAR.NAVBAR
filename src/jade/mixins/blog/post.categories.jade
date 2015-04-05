@@ -1,0 +1,16 @@
+//- BLOG POST CATEGORY ASIDE
+mixin blog-post-categories()
+	- var columnCount = 1
+	- var catCount = 1
+	.panel.panel-default.blog-categories
+		.panel-heading Blog Categories
+		.panel-body
+			.well.well-sm
+				.row
+					- for (columnCount = 1; columnCount < 3; columnCount++)
+						.col-xs-6
+							ul.list-unstyled
+								- for (catCount = 1; catCount !== 12; catCount++)
+									li: a(href="#") Blog Category
+	- columnCount = 1
+	- catCount = 1

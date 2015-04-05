@@ -1,0 +1,34 @@
+- var textblock = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
+// PAGE - CONTENT
+section.template-blog-landing
+	header.container-fluid
+		.row
+			.col-lg-12
+				.jumbotron
+					h1 Blog Landing Page
+					h1: small smaller sub-heading
+					p This paragraph is sized in relation to its parent element, the class <code>.jumbotron</code>.  In addition to the content of this template being structured towards a blog landing page, a versatile sidebar navigation menu can be optionally put in place.
+	article.container-fluid
+		.row
+			// BLOG POSTS PREVIEW HEADLINE
+			.col-md-8.col-lg-9
+				// BLOG POST PREVIEW
+				+ blog-post-preview('Blog Post Title', 'John Smith', 'October 23, 2015')
+				+ blog-post-preview('Blog Post Title', 'John Smith', 'October 23, 2015')
+				+ blog-post-preview('Blog Post Title', 'John Smith', 'October 23, 2015')
+				+ blog-post-preview('Blog Post Title', 'John Smith', 'October 23, 2015')
+				+ blog-post-preview('Blog Post Title', 'John Smith', 'October 23, 2015')		
+			// ASIDE BLOG WIDGETS
+			.col-md-4.col-lg-3
+				// BLOG SEARCH
+				aside
+					+ blog-post-search()
+				// BLOG CATEGORIES
+				aside
+					+ blog-post-categories()
+				// BLOG TEXT BLOCK ASIDE
+				aside
+					+ blog-post-text-block('Recent Comments', '4', 'Comment Title', textblock)
+				// BLOG MEDIA BLOCK ASIDE
+				aside
+					+ blog-post-media-block('Blog Photos', '5', 'http://placehold.it/600x400/332424&text=d.h.t.s', 'Sample caption for image.')

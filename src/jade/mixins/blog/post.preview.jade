@@ -1,0 +1,28 @@
+//- BLOG POST PREVIEW MIXIN TEMPLATE
+mixin blog-post-preview (title, author, datetime)
+	.panel.panel-default.post-preview
+		.panel-heading
+			h2
+				a(href="#") #{title}
+			.row
+				.col-xs-5
+					.blog-post-author by 
+						a(href="#") #{author}
+				.col-xs-7.text-right
+					.blog-post-date
+						i.fa.fa-fw.fa-clock-o
+						date #{datetime}
+		.panel-body.post-preview-img
+			figure
+				img.img-responsive(src="http://placehold.it/2100x650/350B06&text=d.h.t.s")
+		.panel-body.post-preview-text 
+			span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			
+		.panel-footer
+			.row
+				.col-xs-12
+					ul.list-inline
+						li: .blog-post-tag.label.label-default tagname
+						li: .blog-post-tag.label.label-default tagname
+						li: .blog-post-tag.label.label-default tagname
+						li: .blog-post-tag.label.label-default tagname
+						li: .blog-post-tag.label.label-default tagname

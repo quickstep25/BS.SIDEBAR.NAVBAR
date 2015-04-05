@@ -1,0 +1,30 @@
+mixin navbar-dropdown(menu_items)
+	each menu in menu_items
+		li.dropdown
+			+ navbar-menu-toggle(menu)
+				each header in menu.navs
+					+ navbar-links-header(header)
+						each link in header.links
+							+ navbar-links(link)
+
+mixin navbar-menu-toggle(item)
+	- var button_attributes = { 'href': '#', 'data-toggle': 'dropdown', 'role': 'button', 'aria-expanded': 'false', 'tabindex': -1 }
+	a.dropdown-toggle.navbar-navs-links-toggle()&attributes(button_attributes)
+		i.fa.fa-fw.visible-xs-inline-block(class=item.icon)
+		span=item.title
+	- var menu_attributes = { 'id': item.id, 'role': 'menu', 'aria-labelledby': item.id }
+	ul.dropdown-menu.navbar-navs-links-menu()&attributes(menu_attributes)
+		block
+
+mixin navbar-links-header(item)
+	- var header_attributes = { 'role': 'presentation', 'class': 'dropdown-header' }
+		li.divider
+	li()&attributes(header_attributes)=item.header
+	block
+
+mixin navbar-links(item)
+	- var link_attributes = { 'role': 'menuitem', 'tabindex': -1, 'href': item.url, 'target': '_blank' }
+	li(role="presentation")
+		a()&attributes(link_attributes)
+			i.fa.fa-fw(class=item.icon)
+			span=item.title

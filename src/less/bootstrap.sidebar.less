@@ -1,0 +1,139 @@
+
+/* ************************************************************************************************************ */
+// SIDEBAR HERO
+/*
+.brand-hero {
+	position: 						relative;
+// 	margin:							0 auto;
+// 	width: 							100%;
+// 	text-align: 					center;
+	background-color: 				#3F2525;
+	height: 						160px;
+	box-shadow: 					inset 5px 5px 56px #352626;
+	.transition(background-color  3.8s ease);
+	&:hover {
+		background-color: 			#adadad;
+	}
+
+	img {
+		position: 					relative;
+		margin:						0 auto;
+		.opacity(0.2);
+		height: 					140px;
+		top: 						10px;
+// 		left: 						20%;
+		.transition(all 1.8s ease);
+		&:hover {
+			.opacity(1.0);
+		}
+	}
+}
+*/
+/* ************************************************************************************************************ */
+//  SCAFFOLDING - INITIAL STYLES AND STATES - CORE CONTENT WRAPPERS
+//  ARITCLE CONTENT - REPORTS - DATA - CENTRAL
+// #wrapper-sidebar {
+// 	width:					25%;
+// 	position:				fixed;
+// 	position:				static;
+// 	top:					50px;
+// 	bottom:					0;
+// 	left:					-25%;
+// 	visibility:				hidden;
+// 	overflow-x:				hidden;
+// 	overflow-y:				hidden;
+// 	background-color:		#222222;
+// 	margin-bottom:			20px;
+// 	padding:				0;
+// 	z-index:				1050;
+
+// 	&.open {
+// 		left:				0;
+// 		width:				25%;
+// 		visibility:			visible;
+// 	}
+// }
+// SIDEBAR CONTENT
+// SIDEBAR SETTINGS AT DEFAULT WHICH IS 768PX
+#sidebar {
+	padding:						0 !important;
+
+	ul {
+		position: 					relative;
+		top: 						0;
+		left: 						0;
+		padding: 					0;
+// 		padding-bottom: 			20px;
+		margin: 					0;
+		width: 						100%;
+		box-shadow: 				0px 0px 5px #3c3c40;
+
+		li {
+			padding: 				0;
+			margin: 				0;
+			list-style-type: 		none;
+			float: 					none;
+			#gradient > .vertical	(#2f2f2f, #282829);
+			border-left: 			10px solid #350B06;
+			// ARROW
+			&.active {
+				border-color: 		#8A0917;
+				&:after {
+					right: 				0;
+					top: 				50%;
+					border: 			solid transparent;
+					content: 			" ";
+					height: 			10px;
+					width: 				0;
+					position: 			absolute;
+					pointer-events: 	none;
+					border-right-color: #ADADAD;
+					border-width: 		10px;
+					margin-top: 		-10px;
+				}
+			}
+			a {
+				display: 			block;
+				padding: 			25px 0 0 30px;
+				margin: 			0;
+				color: 				#afafaf;
+
+				i {
+					font-size: 		18px;
+					width: 			40px;
+					height: 		40px;
+				}
+
+				&:hover {
+					color: 			#e5e4e4;
+					background: 	lighten(#282829, 5%);
+				}
+				&:active, .active {
+					color: 			#e5e4e4;
+					background: 	lighten(#282829, 5%);
+					.box-shadow(inset 0 2px 3px rgba(0,0,0, 0.2));
+				}
+
+			}
+		}
+	}
+}
+
+/*
+#wrapper-sidebar {
+	padding-left: 				0;
+	padding-right: 				0;
+	left: 						-25%;
+	.navbar-collapse.collapse {
+		display:					none;
+	}
+	&.open {
+		left: 				0;
+		width: 				25%;
+		.navbar-collapse.collapse {
+			display: 		block !important;
+		}
+	}
+
+}
+*/

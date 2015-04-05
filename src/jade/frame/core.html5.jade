@@ -1,0 +1,58 @@
+include ../mixins/mixins
+
+doctype
+html(lang="en")
+	head
+		block TITLE
+			title Please Extend Me and Overwrite Me!
+		block META
+			include meta
+		block STYLES-CDN
+			// BOOTSTRAP
+			link(data-require="bootstrap@3.3.4", data-semver="3.3.4", rel="stylesheet", media="all", type="text/css", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+			link(data-require="bootstrap@3.3.4", data-semver="3.3.4", rel="stylesheet", media="all", type="text/css", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
+		block STYLES-VENDOR
+		block SCRIPTS-POLY		
+		block STYLES-POLY
+		// APPLICATION STYLES
+		block STYLES-APP
+			link(rel="stylesheet", media="all", type="text/css", href="./css/application.styles.min.css")
+		block FONTS-CDN
+			// FONTS - FONT AWESOME
+			link(data-require="fontawesome@4.3.0", data-semver="4.3.0", rel="stylesheet", media="all", type="text/css", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+		block FONTS-GOOGLE
+			// FONTS - EK MUKTA
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Ek+Mukta:200,300,400,500,600")
+			// FONTS - LATO
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Lato:300,400,700")
+			// FONTS - UBUNTU MONO
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700")
+			// FONTS - OPEN SANS
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700")
+			// FONTS - SOURCE SANS PRO
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900")
+			// FONTS - SOURCE CODE PRO
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,500,600,700")
+			// FONTS - PT SANS
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=PT+Sans:400,700")
+			// FONTS - PT MONO
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=PT+Mono")
+			// FONTS - PT SANS CAPTION
+			link(rel="stylesheet", media="all", type="text/css", href="http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700")
+		block FONTSLOCAL
+		block FAVICONS
+			include favicons
+	body
+		#wrapper-page
+			block NAVIGATION
+			block CONTENT
+		block SCRIPTS-CDN
+			// SCRIPTS - JQUERY
+			script(data-require="jquery@2.1.3", data-semver="2.1.3", type="text/javascript", charset="UTF-8", src="http://code.jquery.com/jquery-2.1.3.min.js")
+			// SCRIPTS - BOOTSTRAP
+			script(data-require="bootstrap@3.3.4", data-semver="3.3.4", type="text/javascript", charset="UTF-8", src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+		block SCRIPTS-VENDOR
+		block SCRIPTS-APP
+		block SCRIPTS-TRACKER
+			// SCRIPTS - GOOGLE ANALYTICS
+			script(type="text/javascript", charset="UTF-8", src="./js/google.tracker.min.js")

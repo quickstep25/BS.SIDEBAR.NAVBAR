@@ -1,0 +1,10 @@
+//- DATA VARIABLES
+- var navbar_alerts_json = [{"fa-fire":"New Support Tickets","fa-comment":"New Comments","fa-twitter":"New Followers","fa-envelope":"New Private","fa-tasks":"New Tasks","fa-database":"New Data Issues"}]
+- var navbar_usermenu_json = [{"fa-info-circle":"last login: 5 hours ago.","fa-gear":"Profile Settings","fa-sign-out":"Log off"}]
+- var navbar_progressbars_json = [{"Agent Survey Data": 37,"Call Observation Data": 76,"Credits / Adjustments": 35,"Top Performance Data": 46,"Scheduling Data": 100,"First Call Data": 14, "Southwest Data": 77, "Midwest Data": 68}]
+// NAVBAR - NAVS HEADER DROPDOWNS
+ul.navbar-notifications
+	+ navbar-nav-usermenu('01', 'fa-sign-out', navbar_usermenu_json)
+	+ navbarddmessages('01', 'fa-envelope', 'Carl Smith', 'Toby Woodland', 'Sally Jackson', 'Klahan Sai', 'Samuel Kane', 'Larry Jenkins', 'Curby Stoots')
+	+ navbar-nav-alert('01', 'fa-bell', navbar_alerts_json)
+	+ navbar-nav-progressbar('01', 'fa-database', navbar_progressbars_json)

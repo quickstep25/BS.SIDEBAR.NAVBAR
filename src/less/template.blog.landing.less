@@ -1,0 +1,135 @@
+// STYLES FOR BLOG TEMPLATE LANDING PAGE
+@font-size: 12px;
+@line-height: 1.4;
+@lines-to-show: 4;
+
+
+#wrapper-content {
+	margin-top:						10px;
+}
+
+.template-blog-landing {
+
+	.panel-heading {
+		font-weight: 			600;
+	}
+
+	.panel .well {
+		margin: 				0;
+		#gradient > .vertical(lighten(#f0f0f0, 5%), #e8e8e8);
+
+	}
+
+	aside .panel  {
+		background: 		fade(#FFFFFF, 60%);
+		.transition(background-color 1.8s ease);
+
+		&:hover {
+		background-color: 		#FFFFFF;
+
+		}
+	}
+
+	.post-preview {
+		.panel-heading {
+			h1, h2, h3 {
+				font-size: 			1.7em;
+
+			}
+			.blog-post-author,
+			.blog-post-date {
+				color:					#999999;
+				font-size: 				11px;
+			}
+		}
+		.panel-body {
+			border-bottom: 				1px solid transparent;
+
+			& + .panel-body {
+				border-top: 			1px solid #ededed;
+			}
+		}
+		.panel-footer {
+			#gradient > .vertical(#FFFFFF, rgba(115, 100, 84, 0.18));
+			.list-inline {
+				margin:					0;
+				li {
+					padding: 			0px 0 2px 0px;
+				}
+			}
+			.blog-post-tag {
+				font-weight: 			400;
+				border-radius:			4px;
+				background-color: 		#350B06;
+				&:hover, &:focus	{
+					background-color: 	lighten(#6E1417, 15%);
+					cursor: 			pointer;
+				}
+			}
+		}
+		.post-preview-text {
+			.box-sizing(border-box);
+			max-height: 				140px;
+			display: 					block;
+			display: 					-webkit-box;
+			max-width: 					100%;
+			height: 					@font-size * @line-height * @lines-to-show + 15;
+			margin: 					0 auto 35px 0;
+			font-size: 					@font-size;
+			line-height: 				@line-height;
+			-webkit-line-clamp: 		@lines-to-show;
+			-webkit-box-orient: 		vertical;
+			overflow: 					hidden;
+			text-overflow: 				ellipsis;
+			position: 					relative;
+		}
+	}
+	.blog-search {
+
+	}
+	.blog-categories {
+		.well {
+			padding-left: 				30px;
+		}
+	}
+	.blog-photo-strip {
+
+		&:hover {
+			border-top-color: 			#ebebeb;
+		}
+
+		.panel-body {
+			border-bottom: 				1px solid transparent;
+
+			& + .panel-body {
+				border-top: 			1px solid #C0C0C0;
+			}
+		}
+
+		figure {
+			.opacity(0.7);
+			.transition(opacity 1.6s ease);
+
+			&:hover {
+				.opacity(1.0);
+			}
+
+			figcaption {
+				font-family: 			"Helvetica Neue";
+				color:					#000000;
+				border: 				1px solid #ccc;
+				margin-top: 			5px;
+				padding: 				3px;
+				text-align: 			justify;
+				font-size: 				8pt;
+			}
+		}
+	}
+	.blog-text-block {
+		.well h4 {
+			font-size: 				12px;
+			font-weight: 			600;
+		}
+	}
+
+}

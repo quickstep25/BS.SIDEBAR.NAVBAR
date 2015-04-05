@@ -1,0 +1,19 @@
+//- NAVS - ALERTS
+mixin navbar-nav-alert(id, icon, json)
+	- var counter = 1
+	- var navID = 'navbar-nav-alert-id-' + id
+	li.dropdown
+		button.navbar-toggle.dropdown-toggle(id=navID, aria-haspopup='true', aria-expanded='false', type='button', data-toggle="dropdown", href='#')
+			span.sr-only Alerts Button
+			i.fa(class=icon)
+		ul.dropdown-menu.dropdown-alerts(role="menu", aria-labelledby=navID)
+			each alert, index in json[0]
+				li(role="presentation")
+					a(role="menuitem", tabindex='-1', href='#')
+						div
+							i.fa.fa-fw(class=index)
+							| #{alert}
+							span.pull-right.text-muted.small #{counter} minutes ago
+							- counter = counter + 13 
+				li.divider
+	- counter = 1

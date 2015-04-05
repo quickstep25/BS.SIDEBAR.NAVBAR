@@ -1,0 +1,38 @@
+//- FAVICONS
+//- VARS
+- var path = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/'
+- var prefix = 'dhts'
+//- DEVICE MIXINS
+mixin ie(prefix, ...sizes)
+	meta(name="msapplication-TileColor", content="#FFFFFF")
+	meta(name='msapplication-TileImage', content=path + prefix + '-favicon-' + '144' + 'x' + '144' + '.ico')
+	each size in sizes
+		meta(name='msapplication-square' + size + 'x' + size + 'logo', content=path + prefix + '-favicon-' + size + 'x' + size + '.ico')
+//- MIXIN - FAVICONS
+mixin favicon(prefix, ...sizes)
+	link(rel="icon", type="image/x-icon", href=path + prefix + '-favicon-16x16.ico')
+	each size in sizes
+		link(rel="icon", type="image/x-icon", href=path + prefix + '-favicon-' + size + 'x' + size + '.ico', sizes=size + 'x' + size)
+//- MIXIN - CHROME ANDROID ICONS
+mixin android(prefix, ...sizes)
+	each size in sizes
+		link(rel="shortcut icon", type="image/png", href=path + prefix + '-android-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)
+//- MIXIN - APPLE DEFAULT ICONS
+mixin apple(prefix, ...sizes)
+	each size in sizes
+		link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-apple-icon-' + size + 'x' + size + '-2x.png', sizes=size*2 + 'x' + size*2)
+		link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-apple-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)
+//- MIXIN - APPLE DEVICE IPHONE ICONS
+mixin iphone(prefix, size)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-iphone-icon-' + size + 'x' + size + '-2x.png', sizes=size*2 + 'x' + size*2)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-iphone-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)
+//- MIXIN - APPLE DEVICE IPAD ICONS
+mixin ipad(prefix, size)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-ipad-icon-' + size + 'x' + size + '-2x.png', sizes=size*2 + 'x' + size*2)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-ipad-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)
+mixin spotlight(prefix, size)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-spotlight-icon-' + size + 'x' + size + '-2x.png', sizes=size*2 + 'x' + size*2)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-spotlight-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)
+mixin settings(prefix, size)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-settings-icon-' + size + 'x' + size + '-2x.png', sizes=size*2 + 'x' + size*2)
+	link(rel="apple-touch-icon", type="image/png", href=path + prefix + '-ios7-settings-icon-' + size + 'x' + size + '.png', sizes=size + 'x' + size)

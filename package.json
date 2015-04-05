@@ -1,0 +1,42 @@
+{
+	"name" : "BS.SIDEBAR.NAVBAR",
+	"description" : "Template for Bootstrap which contains a top navigation bar and a collapsing sidebar.",
+	"version" : "1.0.0",
+	"keywords" : 
+	[
+		"bootstrap",
+		"javascript",
+		"js",
+		"navigation",
+		"navbar",
+		"sidebar"
+	],
+	"homepage" : "http://quickstep25.github.io/BS.SIDEBAR.NAVBAR/",
+	"author" : 
+	{
+		"name" : "Doug Hill",
+		"email" : "quickstep25@me.com",
+		"url" : "http://quickstep25.github.io/"
+	},
+	"contributors" : 
+	[
+		
+	],
+	"main" : "dist/index.html",
+	"dependencies" : 
+	{
+		"jquery" : ">=1.9.0"
+	},
+	"repository" : 
+	{
+		"type" : "git",
+		"url" : "https://github.com/quickstep25/BS.SIDEBAR.NAVBAR"
+	},
+	"bugs" : "https://github.com/quickstep25/BS.SIDEBAR.NAVBAR/issues/",
+	"license" : "Apache Version 2",
+	"readmeFilename" : "README.md",
+	"devDependencies" : 
+	{
+		
+	}
+}

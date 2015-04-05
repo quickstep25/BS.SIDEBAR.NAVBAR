@@ -1,0 +1,81 @@
+// NAVBAR AND DROPDOWN TOGGLES
+.navbar-toggle.dropdown-toggle {
+	margin:					0;
+	display: 						block;
+	width: 							40px;
+	height: 						40px;
+}
+.sidebar-toggle {
+	display: 						block;
+	float: 							left;
+	width: 							40px;
+	height: 						40px;
+}
+// NAVBAR BRAND
+.navbar-brand {
+	font-family: 					'Lato';
+	font-weight: 					300;
+	font-size: 						14px;
+	position: 						relative;
+	letter-spacing: 				1px;
+}
+.navbar-logo {
+	position: 						relative;
+	float: 							right;
+	margin-left: 					5px;
+	top:							4px;
+	padding: 						0;
+	.opacity						(0.6);
+	height: 						50px;
+
+	&:hover, &:focus {
+		.opacity					(1.0);
+	}
+
+	img {
+		width: 						40px;
+		height: 					40px;
+		padding: 					0;
+	}
+}
+
+// NAVBAR NAVS DROPDOWNS
+.navbar-notifications {
+	margin-bottom:					0;
+	padding: 						0;
+	list-style-type:				none;
+	li.dropdown {
+		margin-right:				5px;
+		margin-left: 				5px;
+		position:					static;
+		display:					block;
+		margin-top: 				0;
+		float: 						right;
+		ul.dropdown-menu {
+			border: 				none;
+			visibility: 			hidden;
+			.opacity(0);
+			transition:				opacity 0s linear, visibility 0s linear;
+			display:				block;
+			li.divider:first-child, li.divider:last-child {
+				display: 			none;
+			}
+		}
+		&.open {
+			ul.dropdown-menu {
+				visibility:			visible;
+				.opacity(1);
+				transition: 		opacity 0.25s linear, visibility 0.25s linear;
+			}
+			ul {
+				padding: 			0;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+
+			}
+		}
+	}
+}
+.navbar-navs-links-toggle {
+	line-height: 					18px;
+}

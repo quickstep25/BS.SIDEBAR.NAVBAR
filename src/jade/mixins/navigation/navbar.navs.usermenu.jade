@@ -1,0 +1,14 @@
+//- NAVS - USER DROPDOWN
+mixin navbar-nav-usermenu(id, icon, json)
+	li.dropdown
+		button.navbar-toggle.dropdown-toggle(id='navbar-nav-usermenu-' + id, aria-haspopup='true', aria-expanded='false', type='button', data-toggle="dropdown", href='#')
+			span.sr-only User Options Button
+			i.fa(class=icon)
+		ul.dropdown-menu.dropdown-user(role="menu", aria-labelledby='navbar-nav-usermenu-' + id)
+			each option, index in json[0]
+				li.divider
+				li(role="presentation")
+					a(role="menuitem", tabindex='-1', href='#')
+						div
+							i.fa.fa-fw(class=index)
+							span #{option}
