@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Navbar with Sidebar Template - D.H.TECHNICAL.SOLUTIONS</title>
+    <!--META-BASIC-->
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta charset="UTF-8">
+    <!--META-APPLICATION INFORMATION AND DETAILS-->
+    <meta name="application-name" content="Bootstrap Sidebar with Navbar - D.H.TECHNICAL.SOLUTIONS">
+    <meta name="keywords" content="Doug Hill, DHD, DHill Designs, Hill Designs, Doug Hill Designs, Hill Technical Development, DH Technical Development, Hill Technical, Hill Tech, Sidebar, Navbar, Bootstrap">
+    <meta name="author" content="Doug A. Hill">
+    <link rel="author" href="humans.txt">
+    <meta name="description" content="Demonstration of using Bootstrap framework while incorporating a sidebar navigation along with the default Bootstrap top navbar.">
+    <!--META-DESKTOP: INTERNET EXPLORER 8 COMPATIBILITY-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--META-ALL MOBILE DEVICES-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!--META-OLDER MOBILE DEVICES-->
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="0">
+    <!--APPLE OS MOBILE STANDALONE VIEWPORT -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--META-APPLE OS-DISABLE TELEPHONE LINKS-->
+    <meta name="format-detection" content="telephone=no">
+    <!-- BOOTSTRAP-->
+    <link data-require="bootstrap@3.3.4" data-semver="3.3.4" rel="stylesheet" media="all" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link data-require="bootstrap@3.3.4" data-semver="3.3.4" rel="stylesheet" media="all" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- SCRIPTS POLYFILLS-->
+    <script type="text/javascript" charset="UTF-8" src="./js/polyfills.min.js"></script>
+    <!-- APPLICATION STYLES-->
+    <link rel="stylesheet" media="all" type="text/css" href="./css/application.styles.min.css">
+    <!-- FONTS - FONT AWESOME-->
+    <link data-require="fontawesome@4.3.0" data-semver="4.3.0" rel="stylesheet" media="all" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- FONTS - GOOGLE FAVORITES-->
+    <link rel="stylesheet" media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700%7CLato:100,300,400,700%7CSource+Code+Pro:200,300,400,500,600,700%7COpen+Sans:300,400,600,700">
+    <!-- FONTS - LATO-->
+    <link rel="stylesheet" media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-144x144.ico"/>
+    <meta name="msapplication-square310x310logo" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-310x310.ico"/>
+    <meta name="msapplication-square150x150logo" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-150x150.ico"/>
+    <meta name="msapplication-square70x70logo" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-70x70.ico"/>
+    <!-- ICONS - DEFAULT FAVICONS-->
+    <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-16x16.ico"/>
+    <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-48x48.ico" sizes="48x48"/>
+    <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-32x32.ico" sizes="32x32"/>
+    <link rel="icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-favicon-16x16.ico" sizes="16x16"/>
+    <!-- ICONS - IOS7 APPLE DEFAULT ICONS-->
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-512x512-2x.png" sizes="1024x1024"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-512x512.png" sizes="512x512"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-256x256-2x.png" sizes="512x512"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-256x256.png" sizes="256x256"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-128x128-2x.png" sizes="256x256"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-128x128.png" sizes="128x128"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-72x72-2x.png" sizes="144x144"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-72x72.png" sizes="72x72"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-57x57-2x.png" sizes="114x114"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-57x57.png" sizes="57x57"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-50x50-2x.png" sizes="100x100"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-50x50.png" sizes="50x50"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-32x32-2x.png" sizes="64x64"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-32x32.png" sizes="32x32"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-29x29-2x.png" sizes="58x58"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-29x29.png" sizes="29x29"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-16x16-2x.png" sizes="32x32"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-apple-icon-16x16.png" sizes="16x16"/>
+    <!-- ICONS - CHROME ANDROID ICONS-->
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-192x192.png" sizes="192x192"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-128x128.png" sizes="128x128"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-96x96.png" sizes="96x96"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-72x72.png" sizes="72x72"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-48x48.png" sizes="48x48"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-38x38.png" sizes="38x38"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-36x36.png" sizes="36x36"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-32x32.png" sizes="32x32"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-25x25.png" sizes="25x25"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-24x24.png" sizes="24x24"/>
+    <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-19x19.png" sizes="19x19"/>
+    <!-- ICONS - IOS7 IPHONE ICONS-->
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-iphone-icon-60x60-2x.png" sizes="120x120"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-iphone-icon-60x60.png" sizes="60x60"/>
+    <!-- ICONS - IOS7 IPAD ICONS-->
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-ipad-icon-76x76-2x.png" sizes="152x152"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-ipad-icon-76x76.png" sizes="76x76"/>
+    <!-- ICONS - IOS7 SPOTLIGHT ICONS-->
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-spotlight-icon-40x40-2x.png" sizes="80x80"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-spotlight-icon-40x40.png" sizes="40x40"/>
+    <!-- ICONS - IOS7 SETTINGS ICONS-->
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-settings-icon-29x29-2x.png" sizes="58x58"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-ios7-settings-icon-29x29.png" sizes="29x29"/>
+  </head>
+  <body>
+    <div id="wrapper-page">
+      <div id="wrapper-navigation">
+        <!-- NAVIGATION - NAVBAR SIDEBAR-->
+        <nav role="navigation" class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+            <!-- NAVBAR HEADER-->
+            <div class="navbar-header">
+              <button id="navbar-toggle" type="button" data-toggle="collapse" href="#wrapper-sidebar,#sidebar,#navbar" data-target="#wrapper-sidebar,#sidebar,#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">TOGGLE ALL NAVIGATION MENUS </span><span><i class="fa fa-bars"></i></span></button>
+              <button id="sidebar-toggle" type="button" aria-controls="sidebar" class="sidebar-toggle navbar-toggle hidden-xs"><span class="sr-only">TOGGLE SIDEBAR VISIBILITY</span><span><i class="fa fa-bars"></i></span></button>
+            </div>
+            <!-- NAVBAR BRAND TITLE--><a href="#" class="navbar-brand hidden-xs">dh.technical.solutions</a>
+            <!-- NAVBAR LOGO--><a href="#" class="navbar-logo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-128x128.png"></a>
+            <!-- NAVBAR - NAVS HEADER DROPDOWNS-->
+            <ul class="navbar-notifications">
+              <li class="dropdown">
+                <button id="navbar-nav-usermenu-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">User Options Button</span><i class="fa fa-sign-out"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-usermenu-01" class="dropdown-menu dropdown-user">
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-info-circle"></i><span>last login: 5 hours ago.</span></div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-gear"></i><span>Profile Settings</span></div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-sign-out"></i><span>Log off</span></div></a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button id="navbar-nav-msg-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Messages Button</span><i class="fa fa-envelope"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-msg-id-01" class="dropdown-menu dropdown-messages">
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Carl Smith</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Toby Woodland</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Sally Jackson</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Klahan Sai</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Samuel Kane</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Larry Jenkins</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
+                        <div class="media-body">
+                          <h5 class="media-heading"><strong>Curby Stoots</strong></h5>
+                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
+                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
+                          </p>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button id="navbar-nav-alert-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Alerts Button</span><i class="fa fa-bell"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-alert-id-01" class="dropdown-menu dropdown-alerts">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-fire"></i>New Support Tickets<span class="pull-right text-muted small">1 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-comment"></i>New Comments<span class="pull-right text-muted small">14 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-twitter"></i>New Followers<span class="pull-right text-muted small">27 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-envelope"></i>New Private<span class="pull-right text-muted small">40 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-tasks"></i>New Tasks<span class="pull-right text-muted small">53 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div><i class="fa fa-fw fa-database"></i>New Data Issues<span class="pull-right text-muted small">66 minutes ago</span>
+                      </div></a></li>
+                  <li class="divider"></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <button id="navbar-nav-progress-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Data Progress Button</span><i class="fa fa-database"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-progress-id-01" class="dropdown-menu dropdown-progress">
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Agent Survey Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Call Observation Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-2" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Credits / Adjustments</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-3" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Top Performance Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-4" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Scheduling Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-5" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>First Call Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-6" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Southwest Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-7" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                  <li class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
+                      <div class="progress-wrapper">
+                        <div class="progress-title"><i class="fa fa-fw fa-exchange"></i>Midwest Data</div>
+                        <div class="progress progress-container">
+                          <div class="label label-default">% COMPLETE</div>
+                          <div id="navbar-nav-progressbar-01-8" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" class="progress-bar"></div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- NAVBAR COLLAPSE-->
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-navs-links">
+                <!-- NAVBAR NAVS-->
+                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-code"></i><span>Code Examples</span></a>
+                  <ul class="dropdown-menu navbar-navs-links-menu" id="nav-examples" role="menu" aria-labelledby="nav-examples">
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">Knockout</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://quickstep25.github.io/KO.SELECT2/" target="_blank"><i class="fa fa-fw fa-caret-square-o-down"></i><span>Select2 Integration</span></a></li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">Bootstrap</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25/full/bNJoza/" target="_blank"><i class="fa fa-fw fa-bars"></i><span>Progress Bar CSS Animation</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25/full/gbvREN/" target="_blank"><i class="fa fa-fw fa-hand-o-up"></i><span>Bootstrap Select Integration</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#" target="_blank"><i class="fa fa-fw fa-toggle-left"></i><span>Sidebar Navigation Menu</span></a></li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">Select2</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25/full/ZYMBMJ/" target="_blank"><i class="fa fa-fw fa-caret-square-o-down"></i><span>Initialization via Click</span></a></li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">DataTables</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25/full/tdoni/" target="_blank"><i class="fa fa-fw fa-table"></i><span>Basic Bootstrap Integration</span></a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-users"></i><span>Social Media</span></a>
+                  <ul class="dropdown-menu navbar-navs-links-menu" id="nav-social" role="menu" aria-labelledby="nav-social">
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">Professional</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.behance.net/quickstep25" target="_blank"><i class="fa fa-fw fa-behance-square"></i><span>Behance</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://dribbble.com/quickstep25" target="_blank"><i class="fa fa-fw fa-dribbble"></i><span>Dribbble</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://quickstep25.github.io" target="_blank"><i class="fa fa-fw fa-github-square"></i><span>GitHub</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://gist.github.com/quickstep25" target="_blank"><i class="fa fa-fw fa-github-alt"></i><span>Gist</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25" target="_blank"><i class="fa fa-fw fa-codepen"></i><span>CodePen</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://jsfiddle.net/user/quickstep25/" target="_blank"><i class="fa fa-fw fa-jsfiddle"></i><span>jsFiddle</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dougahill" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i><span>LinkedIn</span></a></li>
+                    <li class="divider"></li>
+                    <li role="presentation" class="dropdown-header">Non-Professional</li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/quickstep25" target="_blank"><i class="fa fa-fw fa-twitter-square"></i><span>Twitter</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.pinterest.com/quickstep25/" target="_blank"><i class="fa fa-fw fa-pinterest-square"></i><span>PinInterest</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://plus.google.com/+DougHill-WebDeveloper" target="_blank"><i class="fa fa-fw fa-google-plus-square"></i><span>Google+</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.facebook.com/quickstep25" target="_blank"><i class="fa fa-fw fa-facebook-square"></i><span>FaceBook</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.youtube.com/quickstep25" target="_blank"><i class="fa fa-fw fa-youtube-square"></i><span>YouTube</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://vimeo.com/quickstep25" target="_blank"><i class="fa fa-fw fa-vimeo-square"></i><span>Vimeo</span></a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.wordpress.com/dougahill" target="_blank"><i class="fa fa-fw fa-wordpress"></i><span>WordPress</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="wrapper-content">
+        <!-- PAGE - CONTENT-->
+        <section class="template-blog-landing">
+          <header class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="jumbotron">
+                  <h1>Blog Landing Page</h1>
+                  <h1><small>smaller sub-heading</small></h1>
+                  <p>This paragraph is sized in relation to its parent element, the class <code>.jumbotron</code>.  In addition to the content of this template being structured towards a blog landing page, a versatile sidebar navigation menu can be optionally put in place.</p>
+                </div>
+              </div>
+            </div>
+          </header>
+          <article class="container-fluid">
+            <div class="row">
+              <!-- BLOG POSTS PREVIEW HEADLINE-->
+              <div class="col-md-8 col-lg-9">
+                <!-- BLOG POST PREVIEW-->
+                <div class="panel panel-default post-preview">
+                  <div class="panel-heading">
+                    <h2><a href="#">Blog Post Title</a></h2>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="blog-post-author">by <a href="#">John Smith</a></div>
+                      </div>
+                      <div class="col-xs-7 text-right">
+                        <div class="blog-post-date"><i class="fa fa-fw fa-clock-o"></i>
+                          <date>October 23, 2015</date>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body post-preview-img">
+                    <figure><img src="http://placehold.it/2100x650/350B06&amp;text=d.h.t.s" class="img-responsive"/></figure>
+                  </div>
+                  <div class="panel-body post-preview-text"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</span></div>
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default post-preview">
+                  <div class="panel-heading">
+                    <h2><a href="#">Blog Post Title</a></h2>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="blog-post-author">by <a href="#">John Smith</a></div>
+                      </div>
+                      <div class="col-xs-7 text-right">
+                        <div class="blog-post-date"><i class="fa fa-fw fa-clock-o"></i>
+                          <date>October 23, 2015</date>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body post-preview-img">
+                    <figure><img src="http://placehold.it/2100x650/350B06&amp;text=d.h.t.s" class="img-responsive"/></figure>
+                  </div>
+                  <div class="panel-body post-preview-text"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</span></div>
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default post-preview">
+                  <div class="panel-heading">
+                    <h2><a href="#">Blog Post Title</a></h2>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="blog-post-author">by <a href="#">John Smith</a></div>
+                      </div>
+                      <div class="col-xs-7 text-right">
+                        <div class="blog-post-date"><i class="fa fa-fw fa-clock-o"></i>
+                          <date>October 23, 2015</date>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body post-preview-img">
+                    <figure><img src="http://placehold.it/2100x650/350B06&amp;text=d.h.t.s" class="img-responsive"/></figure>
+                  </div>
+                  <div class="panel-body post-preview-text"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</span></div>
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default post-preview">
+                  <div class="panel-heading">
+                    <h2><a href="#">Blog Post Title</a></h2>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="blog-post-author">by <a href="#">John Smith</a></div>
+                      </div>
+                      <div class="col-xs-7 text-right">
+                        <div class="blog-post-date"><i class="fa fa-fw fa-clock-o"></i>
+                          <date>October 23, 2015</date>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body post-preview-img">
+                    <figure><img src="http://placehold.it/2100x650/350B06&amp;text=d.h.t.s" class="img-responsive"/></figure>
+                  </div>
+                  <div class="panel-body post-preview-text"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</span></div>
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-default post-preview">
+                  <div class="panel-heading">
+                    <h2><a href="#">Blog Post Title</a></h2>
+                    <div class="row">
+                      <div class="col-xs-5">
+                        <div class="blog-post-author">by <a href="#">John Smith</a></div>
+                      </div>
+                      <div class="col-xs-7 text-right">
+                        <div class="blog-post-date"><i class="fa fa-fw fa-clock-o"></i>
+                          <date>October 23, 2015</date>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-body post-preview-img">
+                    <figure><img src="http://placehold.it/2100x650/350B06&amp;text=d.h.t.s" class="img-responsive"/></figure>
+                  </div>
+                  <div class="panel-body post-preview-text"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.			</span></div>
+                  <div class="panel-footer">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                          <li>
+                            <div class="blog-post-tag label label-default">tagname</div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ASIDE BLOG WIDGETS-->
+              <div class="col-md-4 col-lg-3">
+                <!-- BLOG SEARCH-->
+                <aside>
+                  <div class="panel panel-default blog-search">
+                    <div class="panel-heading">Blog Search</div>
+                    <div class="panel-body">
+                      <div class="well well-sm">
+                        <div class="input-group input-group-sm">
+                          <input type="text" placeholder="search blog..." aria-describedby="blogsearch" class="form-control"/><span class="input-group-btn">
+                            <button type="button" class="btn btn-default"><i class="fa fa-search"></i></button></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+                <!-- BLOG CATEGORIES-->
+                <aside>
+                  <div class="panel panel-default blog-categories">
+                    <div class="panel-heading">Blog Categories</div>
+                    <div class="panel-body">
+                      <div class="well well-sm">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <ul class="list-unstyled">
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-xs-6">
+                            <ul class="list-unstyled">
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Blog Category</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+                <!-- BLOG TEXT BLOCK ASIDE-->
+                <aside>
+                  <div class="panel panel-default blog-text-block">
+                    <div class="panel-heading">Recent Comments</div>
+                    <div class="panel-body">
+                      <div class="well well-sm">
+                        <h4>Comment Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                    </div>
+                    <div class="panel-body">
+                      <div class="well well-sm">
+                        <h4>Comment Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                    </div>
+                    <div class="panel-body">
+                      <div class="well well-sm">
+                        <h4>Comment Title</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+                <!-- BLOG MEDIA BLOCK ASIDE-->
+                <aside>
+                  <div class="panel panel-default blog-photo-strip">
+                    <div class="panel-heading">Blog Photos</div>
+                    <div class="panel-body">
+                      <figure class="blog-media-block-figure"><img src="http://placehold.it/600x400/332424&amp;text=d.h.t.s" class="img-responsive"/>
+                        <figcaption class="blog-media-block-figure-caption">Sample caption for image.</figcaption>
+                      </figure>
+                    </div>
+                    <div class="panel-body">
+                      <figure class="blog-media-block-figure"><img src="http://placehold.it/600x400/332424&amp;text=d.h.t.s" class="img-responsive"/>
+                        <figcaption class="blog-media-block-figure-caption">Sample caption for image.</figcaption>
+                      </figure>
+                    </div>
+                    <div class="panel-body">
+                      <figure class="blog-media-block-figure"><img src="http://placehold.it/600x400/332424&amp;text=d.h.t.s" class="img-responsive"/>
+                        <figcaption class="blog-media-block-figure-caption">Sample caption for image.</figcaption>
+                      </figure>
+                    </div>
+                    <div class="panel-body">
+                      <figure class="blog-media-block-figure"><img src="http://placehold.it/600x400/332424&amp;text=d.h.t.s" class="img-responsive"/>
+                        <figcaption class="blog-media-block-figure-caption">Sample caption for image.</figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+    <!-- SCRIPTS - JQUERY-->
+    <script data-require="jquery@2.1.3" data-semver="2.1.3" type="text/javascript" charset="UTF-8" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!-- SCRIPTS - BOOTSTRAP-->
+    <script data-require="bootstrap@3.3.4" data-semver="3.3.4" type="text/javascript" charset="UTF-8" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- SCRIPTS - APPLICATION CUSTOM-->
+    <script type="text/javascript" charset="UTF-8" src="./js/application.min.js"></script>
+    <!-- SCRIPTS - GOOGLE ANALYTICS-->
+    <script type="text/javascript" charset="UTF-8" src="./js/google.tracker.min.js"></script>
+  </body>
+</html>
