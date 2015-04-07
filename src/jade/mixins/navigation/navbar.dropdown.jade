@@ -8,7 +8,7 @@ mixin navbar-dropdown(menu_items)
 							+ navbar-links(link)
 
 mixin navbar-menu-toggle(item)
-	- var button_attributes = { 'href': '#', 'data-toggle': 'dropdown', 'role': 'button', 'aria-expanded': 'false', 'tabindex': -1 }
+	- var button_attributes = { 'href': '#', 'data-toggle': 'dropdown', 'role': 'navigation', 'aria-expanded': 'false', 'tabindex': -1 }
 	a.dropdown-toggle.navbar-navs-links-toggle()&attributes(button_attributes)
 		i.fa.fa-fw.visible-xs-inline-block(class=item.icon)
 		span=item.title

@@ -4,10 +4,10 @@ mixin navbar-nav-progressbar(id, icon, json)
 	- var navID = 'navbar-nav-progress-id-' + id
 	- var barID = 'navbar-nav-progressbar-' + id + '-'
 	li.dropdown
-		button.navbar-toggle.dropdown-toggle(id=navID, aria-haspopup='true', aria-expanded='false', type='button', data-toggle="dropdown", href='#')
+		button.navbar-toggle.navbar-btn.dropdown-toggle(id=navID, aria-haspopup='true', aria-expanded='false', type='button', data-toggle="dropdown", href='#')
 			span.sr-only Data Progress Button
 			i.fa(class=icon)
-		ul.dropdown-menu.dropdown-progress(role="menu", aria-labelledby=navID)
+		ul.dropdown-menu.dropdown-menu-right.dropdown-progress(role="menu", aria-labelledby=navID)
 			each dataset, index in json[0]
 				li.divider
 				li(role="presentation")

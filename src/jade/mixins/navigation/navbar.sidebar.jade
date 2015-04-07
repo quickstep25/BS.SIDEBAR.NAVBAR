@@ -1,0 +1,10 @@
+mixin navbar-sidebar(menu_items)
+	each menu_item in menu_items
+		+ sidebar-links(menu_item)
+
+mixin sidebar-links(item)
+	- var link_attributes = { 'role': 'menuitem', 'tabindex': -1, 'href': item.url, 'target': '_self' }
+	li(role="presentation")
+		a()&attributes(link_attributes)
+			i.fa.fa-fw(class=item.icon)
+			span=item.name

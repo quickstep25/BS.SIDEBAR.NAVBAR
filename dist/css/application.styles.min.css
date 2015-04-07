@@ -40,9 +40,16 @@
 }
 /* ************************************************************************************************************ */
 body {
-  background: #adadad;
   font-family: "Open Sans", "Lucida Grande", "Segoe UI", "Geneva", "Franklin Gothic Medium", "Arial", sans-serif;
   font-size: 12px;
+  background-image: -webkit-linear-gradient(top, #252525 100%, #222222 0%);
+  background-image: -o-linear-gradient(top, #252525 100%, #222222 0%);
+  background-image: linear-gradient(to bottom, #252525 100%, #222222 0%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff252525', endColorstr='#ff222222', GradientType=0);
+  /* 	background-image: 			linear-gradient(to bottom,#3c3c3c 0,#222 100%); */
+  /* 	background-repeat: 			repeat-x; */
+  /* 	background-color: 			#252525; */
 }
 a {
   color: #350B06;
@@ -54,6 +61,7 @@ a:focus {
 }
 /* ************************************************************************************************************ */
 .jumbotron {
+  margin-top: 15px;
   padding: 35px;
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
   background-image: -o-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
@@ -90,6 +98,9 @@ a:focus {
 .navbar .navbar-nav li .fa-caret-down {
   padding-left: 3px;
 }
+.navbar .navbar-nav li > a {
+  padding-left: 25px;
+}
 .navbar .navbar-collapse {
   clear: both;
 }
@@ -101,7 +112,8 @@ a:focus {
   margin: 0;
   padding: 15px 0 15px 15px;
 }
-.navbar-inverse .navbar-toggle {
+.navbar-inverse .navbar-toggle,
+body .navbar-toggle {
   border-color: #1C1C1C;
 }
 #navbar-toggle {
@@ -635,6 +647,8 @@ ul.dropdown-progress {
 }
 #wrapper-content {
   margin-top: 10px;
+  background-color: #adadad;
+  background-image: url(http://www.transparenttextures.com/patterns/assault.png);
 }
 .template-blog-landing .panel-heading {
   font-weight: 600;
@@ -714,7 +728,8 @@ ul.dropdown-progress {
   position: relative;
 }
 .template-blog-landing .blog-categories .well {
-  padding-left: 30px;
+  padding-left: 15px;
+  font-size: 11px;
 }
 .template-blog-landing .blog-photo-strip:hover {
   border-top-color: #ebebeb;
@@ -772,27 +787,44 @@ ul.dropdown-progress {
   #wrapper-content {
     margin-top: 0;
   }
-  #wrapper-content header.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
+  .navbar-notifications {
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
   }
-  #wrapper-content header.container-fluid .jumbotron {
-    border-radius: 0;
+  .navbar-notifications li.dropdown ul {
+    width: auto;
+    min-width: 360px;
+    max-width: 480px;
   }
-  .jumbotron {
+  .navbar-notifications .media-body p {
+    max-height: 16px;
+    margin: 2px 0 2px 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 10px;
+  }
+  .navbar-notifications .dropdown-menu > li > a {
+    white-space: normal;
+  }
+  .container-fluid .jumbotron {
+    margin-top: 0;
     padding: 45px;
+    border-radius: 0;
+    margin-left: -15px;
+    margin-right: -15px;
   }
-  .jumbotron h1,
-  .jumbotron h2 {
+  .container-fluid .jumbotron h1,
+  .container-fluid .jumbotron h2 {
     font-size: 35px;
   }
-  .jumbotron h1 small,
-  .jumbotron h2 small,
-  .jumbotron h1 .small,
-  .jumbotron h2 .small {
+  .container-fluid .jumbotron h1 small,
+  .container-fluid .jumbotron h2 small,
+  .container-fluid .jumbotron h1 .small,
+  .container-fluid .jumbotron h2 .small {
     font-size: 26px;
   }
-  .jumbotron p {
+  .container-fluid .jumbotron p {
     font-size: 16px;
     line-height: 1.6;
   }
@@ -815,5 +847,28 @@ ul.dropdown-progress {
 		}
 	}
 	*/
+}
+@media (min-width: 768px) {
+  #container-sidebar {
+    width: 175px;
+    position: absolute;
+    top: 51px;
+    float: none;
+    clear: both;
+    margin-top: 20px;
+  }
+  #container-sidebar li {
+    float: none;
+  }
+  #container-sidebar li i {
+    margin-right: 10px;
+  }
+  #container-sidebar li > a {
+    padding-left: 10px;
+  }
+  #wrapper-content {
+    margin: 0 0 0 175px;
+    position: static;
+  }
 }
 /*# sourceMappingURL=application.styles.min.css.map */

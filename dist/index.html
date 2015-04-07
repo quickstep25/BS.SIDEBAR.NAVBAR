@@ -95,20 +95,20 @@
     <div id="wrapper-page">
       <div id="wrapper-navigation">
         <!-- NAVIGATION - NAVBAR SIDEBAR-->
-        <nav role="navigation" class="navbar navbar-inverse navbar-static-top">
+        <nav id="wrapper-navigation" role="navigation" class="navbar navbar-inverse navbar-static-top">
           <div class="container-fluid">
             <!-- NAVBAR HEADER-->
             <div class="navbar-header">
-              <button id="navbar-toggle" type="button" data-toggle="collapse" href="#wrapper-sidebar,#sidebar,#navbar" data-target="#wrapper-sidebar,#sidebar,#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">TOGGLE ALL NAVIGATION MENUS </span><span><i class="fa fa-bars"></i></span></button>
+              <button id="navbar-toggle" type="button" data-toggle="collapse" href="#container-navbar" data-target="#container-navbar" aria-expanded="false" aria-controls="container-navbar" class="navbar-toggle collapsed"><span class="sr-only">TOGGLE ALL NAVIGATION MENUS </span><span><i class="fa fa-bars"></i></span></button>
               <button id="sidebar-toggle" type="button" aria-controls="sidebar" class="sidebar-toggle navbar-toggle hidden-xs"><span class="sr-only">TOGGLE SIDEBAR VISIBILITY</span><span><i class="fa fa-bars"></i></span></button>
             </div>
-            <!-- NAVBAR BRAND TITLE--><a href="#" class="navbar-brand hidden-xs">dh.technical.solutions</a>
-            <!-- NAVBAR LOGO--><a href="#" class="navbar-logo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-128x128.png"></a>
+            <!-- NAVBAR BRAND TITLE--><a href="./" class="navbar-brand navbar-text hidden-xs">dh.technical.solutions</a>
+            <!-- NAVBAR LOGO--><a href="./" class="navbar-logo"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/153562/dhts-android-icon-128x128.png"></a>
             <!-- NAVBAR - NAVS HEADER DROPDOWNS-->
             <ul class="navbar-notifications">
               <li class="dropdown">
-                <button id="navbar-nav-usermenu-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">User Options Button</span><i class="fa fa-sign-out"></i></button>
-                <ul role="menu" aria-labelledby="navbar-nav-usermenu-01" class="dropdown-menu dropdown-user">
+                <button id="navbar-nav-usermenu-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle navbar-btn dropdown-toggle"><span class="sr-only">User Options Button</span><i class="fa fa-sign-out"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-usermenu-01" class="dropdown-menu dropdown-menu-right dropdown-user">
                   <li class="divider"></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
                       <div><i class="fa fa-fw fa-info-circle"></i><span>last login: 5 hours ago.</span></div></a></li>
@@ -121,15 +121,14 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <button id="navbar-nav-msg-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Messages Button</span><i class="fa fa-envelope"></i></button>
-                <ul role="menu" aria-labelledby="navbar-nav-msg-id-01" class="dropdown-menu dropdown-messages">
+                <button id="navbar-nav-msg-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle navbar-btn dropdown-toggle"><span class="sr-only">Messages Button</span><i class="fa fa-envelope"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-msg-id-01" class="dropdown-menu dropdown-menu-right dropdown-messages">
                   <li role="presentation" class="message-preview"><a role="menuitem" tabindex="-1" href="#">
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Carl Smith</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -137,9 +136,8 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Toby Woodland</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -147,9 +145,8 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Sally Jackson</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -157,9 +154,8 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Klahan Sai</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -167,9 +163,8 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Samuel Kane</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -177,9 +172,8 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Larry Jenkins</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
@@ -187,17 +181,16 @@
                       <div class="media"><span class="pull-left"><img src="http://placehold.it/40/5e5b58&amp;text=d.h.t.s" class="media-object"/></span>
                         <div class="media-body">
                           <h5 class="media-heading"><strong>Curby Stoots</strong></h5>
-                          <p class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM
-                            <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
-                          </p>
+                          <div class="small text-muted"><i class="fa fa-fw fa-clock-o"></i>Monday 4:22 PM</div>
+                          <p class="hidden-xs">You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
                         </div>
                       </div></a></li>
                   <li class="divider"></li>
                 </ul>
               </li>
               <li class="dropdown">
-                <button id="navbar-nav-alert-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Alerts Button</span><i class="fa fa-bell"></i></button>
-                <ul role="menu" aria-labelledby="navbar-nav-alert-id-01" class="dropdown-menu dropdown-alerts">
+                <button id="navbar-nav-alert-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle navbar-btn dropdown-toggle"><span class="sr-only">Alerts Button</span><i class="fa fa-bell"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-alert-id-01" class="dropdown-menu dropdown-menu-right dropdown-alerts">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
                       <div><i class="fa fa-fw fa-fire"></i>New Support Tickets<span class="pull-right text-muted small">1 minutes ago</span>
                       </div></a></li>
@@ -225,8 +218,8 @@
                 </ul>
               </li>
               <li class="dropdown">
-                <button id="navbar-nav-progress-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle dropdown-toggle"><span class="sr-only">Data Progress Button</span><i class="fa fa-database"></i></button>
-                <ul role="menu" aria-labelledby="navbar-nav-progress-id-01" class="dropdown-menu dropdown-progress">
+                <button id="navbar-nav-progress-id-01" aria-haspopup="true" aria-expanded="false" type="button" data-toggle="dropdown" href="#" class="navbar-toggle navbar-btn dropdown-toggle"><span class="sr-only">Data Progress Button</span><i class="fa fa-database"></i></button>
+                <ul role="menu" aria-labelledby="navbar-nav-progress-id-01" class="dropdown-menu dropdown-menu-right dropdown-progress">
                   <li class="divider"></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">
                       <div class="progress-wrapper">
@@ -303,10 +296,10 @@
               </li>
             </ul>
             <!-- NAVBAR COLLAPSE-->
-            <div id="navbar" class="navbar-collapse collapse">
+            <div id="container-navbar" class="navbar-collapse collapse">
+              <!-- NAVBAR NAVS-->
               <ul class="nav navbar-nav navbar-navs-links">
-                <!-- NAVBAR NAVS-->
-                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-code"></i><span>Code Examples</span></a>
+                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="navigation" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-code"></i><span>Code Examples</span></a>
                   <ul class="dropdown-menu navbar-navs-links-menu" id="nav-examples" role="menu" aria-labelledby="nav-examples">
                     <li class="divider"></li>
                     <li role="presentation" class="dropdown-header">Knockout</li>
@@ -324,7 +317,7 @@
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="http://codepen.io/quickstep25/full/tdoni/" target="_blank"><i class="fa fa-fw fa-table"></i><span>Basic Bootstrap Integration</span></a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-users"></i><span>Social Media</span></a>
+                <li class="dropdown"><a class="dropdown-toggle navbar-navs-links-toggle" href="#" data-toggle="dropdown" role="navigation" aria-expanded="false" tabindex="-1"><i class="fa fa-fw visible-xs-inline-block fa-users"></i><span>Social Media</span></a>
                   <ul class="dropdown-menu navbar-navs-links-menu" id="nav-social" role="menu" aria-labelledby="nav-social">
                     <li class="divider"></li>
                     <li role="presentation" class="dropdown-header">Professional</li>
@@ -346,6 +339,12 @@
                     <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.wordpress.com/dougahill" target="_blank"><i class="fa fa-fw fa-wordpress"></i><span>WordPress</span></a></li>
                   </ul>
                 </li>
+              </ul>
+              <ul id="container-sidebar" class="nav navbar-nav navbar-sidebar">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard.html" target="_self"><i class="fa fa-fw fa-tachometer"></i><span>Dashboard</span></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="charts.html" target="_self"><i class="fa fa-fw fa-bar-chart"></i><span>Charts</span></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="templates.html" target="_self"><i class="fa fa-fw fa-file-o"></i><span>Templates</span></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html" target="_self"><i class="fa fa-fw fa-envelope"></i><span>Contact</span></a></li>
               </ul>
             </div>
           </div>
@@ -606,32 +605,32 @@
                         <div class="row">
                           <div class="col-xs-6">
                             <ul class="list-unstyled">
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
                             </ul>
                           </div>
                           <div class="col-xs-6">
                             <ul class="list-unstyled">
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
-                              <li><a href="#">Blog Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
+                              <li><a href="#">Category</a></li>
                             </ul>
                           </div>
                         </div>

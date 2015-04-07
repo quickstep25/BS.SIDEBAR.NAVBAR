@@ -1,9 +1,12 @@
 // BASE RESETS
 /* ************************************************************************************************************ */
-body {
-	background:					#adadad;
+body:extend(.navbar-inverse all) {
 	font-family:				"Open Sans", "Lucida Grande", "Segoe UI", "Geneva", "Franklin Gothic Medium", "Arial", sans-serif;
 	font-size:					12px;
+	#gradient > .vertical(@start-color: lighten(#222222, 1%); @end-color: darken(#222222, 0%); @start-percent: 100%; @end-percent: 0%);
+/* 	background-image: 			linear-gradient(to bottom,#3c3c3c 0,#222 100%); */
+/* 	background-repeat: 			repeat-x; */
+/* 	background-color: 			#252525; */
 }
 a {
 	color: 						#350B06;
