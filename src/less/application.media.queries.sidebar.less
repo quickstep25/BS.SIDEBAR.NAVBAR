@@ -9,7 +9,7 @@
 		top:					51px;
 		float: 					none;
 		clear: 					both;
-		margin-top: 			20px;
+		margin: 				20px 0 0 0;
 		li {
 			float: 				none;
 
@@ -19,12 +19,23 @@
 
 			> a {
 				padding-left: 	10px;
+
+				&:focus {
+					outline: 	none;
+				}
 			}
+		}
+		&.sidebar-closed {
+			margin: 			20px 0 0 -175px;
 		}
 	}
 	#wrapper-content {
 		margin: 				0 0 0 175px;
 		position: 				static;
+
+		&.sidebar-closed {
+			margin: 			0;
+		}
 	}
 }
 // MEDIUM SCREEN SIZE

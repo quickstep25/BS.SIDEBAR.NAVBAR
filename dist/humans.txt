@@ -1,0 +1,16 @@
+/* TEAM */
+Senior Manager of Technology Tools and Reporting: Doug A. Hill
+Company: AT&T
+Site: quickstep25 [at] me.com
+Twitter: @quickstep25
+Location: Canton, Georgia, United States of America
+                 
+
+/* SITE */
+URL: http://quickstep25.github.io/BS.SIDEBAR.NAVBAR/
+Last update: 2015/3/23 
+Language: English
+Doctype: HTML5
+Standards: HTML5, CSS3, JSLINT, CSS, LESS, JADE
+Components: jQuery, FontAwesome, Bootstrap
+Software: Adobe Dreamweaver CC, Adobe Brackets, Adobe Illustrator CC, TextWrangler, CodeKit2, Adobe Photoshop CC, Adobe Acrobat, Camtasia Studio, Snagit, Adobe Edge Animate CC, Git, Coda2, Power JSON Editor, Stack.io.Edit, Chrome Developer Tools, MAMP Pro
