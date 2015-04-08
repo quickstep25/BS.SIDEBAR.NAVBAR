@@ -495,6 +495,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/dist\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/dist\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/dist\/js\/application.min.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -918,7 +927,7 @@
 		},
 	"\/src\/less\/application.styles.less": {
 		"allowInsecureImports": 0,
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
